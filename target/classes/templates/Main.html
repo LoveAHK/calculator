@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+</head>
+<body>
+<p /> Калькулятор</p>
+<p/> Вставьте значение и выберете действие </p>
+
+ </form>
+ <form >
+    <input type="number" name="a" id="a"/><br>
+    <select name="Znak" id="Znak">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select><br>
+    <input type="number" name="b" id="b"/>
+     <br>
+    <input  type="submit" value="Посчитать через Get" formmethod="get" formaction="/Main"/>
+     <input  type="submit" value="Посчитать через Post" formmethod="post" formaction="/res" />
+     <p th:text="'Итог:'+ ${resultat} " />
+</form>
+</body>
+</html>
